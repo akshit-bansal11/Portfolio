@@ -10,35 +10,35 @@ import { useEffect, useRef } from "react";
 
 // Hook that animates a single element using anime.js params.
 export const useAnime = <T extends HTMLElement>(params: AnimationParams) => {
-	// Ref attached to the DOM node we want to animate.
-	const ref = useRef<T>(null);
+  // Ref attached to the DOM node we want to animate.
+  const ref = useRef<T>(null);
 
-	// Holds the active animation handle so we can pause it on cleanup.
-	const animationRef = useRef<JSAnimation | null>(null);
+  // Holds the active animation handle so we can pause it on cleanup.
+  const animationRef = useRef<JSAnimation | null>(null);
 
-	useEffect(() => {
-		if (!ref.current) return;
+  useEffect(() => {
+    if (!ref.current) return;
 
-		// Skip animation entirely if the user prefers reduced motion.
-		const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Skip animation entirely if the user prefers reduced motion.
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-		if (prefersReducedMotion) {
-			return;
-		}
+    if (prefersReducedMotion) {
+      return;
+    }
 
-		// Strip the `targets` key — we always animate the captured ref.
-		const rest = Object.fromEntries(Object.entries(params).filter(([key]) => key !== "targets"));
+    // Strip the `targets` key — we always animate the captured ref.
+    const rest = Object.fromEntries(Object.entries(params).filter(([key]) => key !== "targets"));
 
-		// Kick off the animation against the bound ref.
-		animationRef.current = animate(ref.current, rest);
+    // Kick off the animation against the bound ref.
+    animationRef.current = animate(ref.current, rest);
 
-		// Pause the animation when the consumer unmounts.
-		return () => {
-			if (animationRef.current?.pause) {
-				animationRef.current.pause();
-			}
-		};
-	}, [params]);
+    // Pause the animation when the consumer unmounts.
+    return () => {
+      if (animationRef.current?.pause) {
+        animationRef.current.pause();
+      }
+    };
+  }, [params]);
 
-	return ref;
+  return ref;
 };

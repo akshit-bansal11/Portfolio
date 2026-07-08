@@ -12,24 +12,24 @@ import AnimatedText from "./AnimatedText";
 
 // Public props.
 interface TaglineDisplayProps {
-	/** Gates the word-reveal animation; defaults to true for mobile use. */
-	active?: boolean;
+  /** Gates the word-reveal animation; defaults to true for mobile use. */
+  active?: boolean;
 }
 
 // Renders the tagline with its light gradient word-by-word reveal.
 export default function TaglineDisplay({ active = true }: TaglineDisplayProps) {
-	// Apply the custom light gradient class to all words.
-	const accentForWord = () => TAGLINE_ACCENT_CLASS;
+  // Apply the custom light gradient class to all words.
+  const accentForWord = () => TAGLINE_ACCENT_CLASS;
 
-	return (
-		<AnimatedText
-			text={TAGLINE}
-			stagger={150}
-			animateBy="words"
-			direction="top"
-			active={active}
-			wordClassName={accentForWord}
-			className={TAGLINE_CLASSNAME}
-		/>
-	);
+  return (
+    <AnimatedText
+      text={TAGLINE}
+      stagger={150}
+      animateBy="words"
+      direction="top"
+      active={active}
+      wordClassName={accentForWord}
+      className={TAGLINE_CLASSNAME}
+    />
+  );
 }

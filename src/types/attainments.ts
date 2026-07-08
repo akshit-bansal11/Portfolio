@@ -5,18 +5,18 @@
  */
 
 export interface GoogleBadgeItem {
-	gBadgeTitle: string;
-	gBadgeLink: string;
+  gBadgeTitle: string;
+  gBadgeLink: string;
 }
 
 export interface CertificationProvider {
-	name: string;
-	logoUrl?: string;
+  name: string;
+  logoUrl?: string;
 }
 
 export interface CertificationItem {
-	name: string;
-	providers: CertificationProvider[];
-	skills?: string[];
-	link: string;
+  name: string;
+  providers: CertificationProvider[];
+  skills?: string[];
+  link: string;
 }

@@ -19,41 +19,41 @@ import Skills from "@/components/sections/Skills";
 
 // Top-level home page component.
 function Home() {
-	return (
-		<div className="flex flex-col items-center w-full">
-			{/* Single responsive hero — mobile static stack + desktop scroll canvas. */}
-			<ScrollHero />
-			{/* Empty buffer between the desktop hero and content sections (desktop only). */}
-			<div className="hidden lg:block">
-				<HeroToContentSpacer />
-			</div>
+  return (
+    <div className="flex flex-col items-center w-full">
+      {/* Single responsive hero — mobile static stack + desktop scroll canvas. */}
+      <ScrollHero />
+      {/* Empty buffer between the desktop hero and content sections (desktop only). */}
+      <div className="hidden lg:block">
+        <HeroToContentSpacer />
+      </div>
 
-			<div className="flex pt-10 px-4 md:px-10 lg:px-15 flex-col items-center w-full gap-16 md:gap-20 lg:gap-30">
-				{/* Each section is staggered in via ScrollReveal as it enters the viewport. */}
-				<ScrollReveal className="w-full" delay={200}>
-					<Projects />
-				</ScrollReveal>
-				<ScrollReveal className="w-full" delay={250}>
-					<Experience />
-				</ScrollReveal>
-				<ScrollReveal className="w-full" delay={300}>
-					<Skills />
-				</ScrollReveal>
-				<ScrollReveal className="w-full" delay={350}>
-					<Attainments />
-				</ScrollReveal>
-				<ScrollReveal className="w-full" delay={400}>
-					<Education />
-				</ScrollReveal>
-				<ScrollReveal className="w-full" delay={450}>
-					<ByTheNumbers />
-				</ScrollReveal>
-				{/* <ScrollReveal className="w-full" delay={500}> */}
-				{/* <Testimonials /> */}
-				{/* </ScrollReveal> */}
-			</div>
-		</div>
-	);
+      <div className="flex pt-10 px-4 md:px-10 lg:px-15 flex-col items-center w-full gap-16 md:gap-20 lg:gap-30">
+        {/* Each section is staggered in via ScrollReveal as it enters the viewport. */}
+        <ScrollReveal className="w-full" delay={200}>
+          <Projects />
+        </ScrollReveal>
+        <ScrollReveal className="w-full" delay={250}>
+          <Experience />
+        </ScrollReveal>
+        <ScrollReveal className="w-full" delay={300}>
+          <Skills />
+        </ScrollReveal>
+        <ScrollReveal className="w-full" delay={350}>
+          <Attainments />
+        </ScrollReveal>
+        <ScrollReveal className="w-full" delay={400}>
+          <Education />
+        </ScrollReveal>
+        <ScrollReveal className="w-full" delay={450}>
+          <ByTheNumbers />
+        </ScrollReveal>
+        {/* <ScrollReveal className="w-full" delay={500}> */}
+        {/* <Testimonials /> */}
+        {/* </ScrollReveal> */}
+      </div>
+    </div>
+  );
 }
 
 export default Home;

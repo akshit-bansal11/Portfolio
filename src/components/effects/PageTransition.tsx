@@ -13,25 +13,25 @@ import { useEffect, useRef } from "react";
 
 // Renders a wrapper that fades and rises in on mount.
 export default function PageTransition({ children }: { children: React.ReactNode }) {
-	// Ref to the wrapper element that receives the animation.
-	const containerRef = useRef<HTMLDivElement>(null);
+  // Ref to the wrapper element that receives the animation.
+  const containerRef = useRef<HTMLDivElement>(null);
 
-	useEffect(() => {
-		if (!containerRef.current) return;
+  useEffect(() => {
+    if (!containerRef.current) return;
 
-		// Fade + lift the wrapper into place after a short delay.
-		animate(containerRef.current, {
-			opacity: [0, 1],
-			translateY: [20, 0],
-			duration: 800,
-			easing: "easeOutExpo",
-			delay: 100,
-		});
-	}, []);
+    // Fade + lift the wrapper into place after a short delay.
+    animate(containerRef.current, {
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 800,
+      easing: "easeOutExpo",
+      delay: 100,
+    });
+  }, []);
 
-	return (
-		<div ref={containerRef} className="opacity-0 w-full">
-			{children}
-		</div>
-	);
+  return (
+    <div ref={containerRef} className="opacity-0 w-full">
+      {children}
+    </div>
+  );
 }

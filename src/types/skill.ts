@@ -7,13 +7,13 @@
 export type SkillPillVariant = "skillSection" | "expItem" | "projectCard";
 
 export interface Skill {
-	name: string;
-	Icon: string;
-	usedIn?: string[];
-	variant?: SkillPillVariant;
+  name: string;
+  Icon: string;
+  usedIn?: string[];
+  variant?: SkillPillVariant;
 }
 
 export interface SkillCategory {
-	title: string;
-	skills: Skill[];
+  title: string;
+  skills: Skill[];
 }

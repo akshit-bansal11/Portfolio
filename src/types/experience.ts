@@ -6,20 +6,20 @@
 import type { StaticImageData } from "next/image";
 
 export interface ExperienceLabeledPoint {
-	label: string;
-	body: string;
+  label: string;
+  body: string;
 }
 
 export type ExperiencePoint = string | ExperienceLabeledPoint;
 
 export interface ExperienceItem {
-	location: string;
-	company: string;
-	role: string;
-	date: string;
-	points: ExperiencePoint[];
-	generalPoint?: string;
-	certificate?: string;
-	logo?: string | StaticImageData;
-	skills?: string[];
+  location: string;
+  company: string;
+  role: string;
+  date: string;
+  points: ExperiencePoint[];
+  generalPoint?: string;
+  certificate?: string;
+  logo?: string | StaticImageData;
+  skills?: string[];
 }

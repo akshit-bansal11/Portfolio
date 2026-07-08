@@ -12,16 +12,16 @@ import { education } from "@/data/educationData";
 
 // Top-level Education section component.
 export default function Education() {
-	return (
-		<ScrollSection id="education">
-			{/* Section heading. */}
-			<div className="flex w-full gap-2 items-baseline">
-				<ScrollSectionHeading heading="education" />
-			</div>
-			{/* One card per education entry. */}
-			{education.map((item, index) => (
-				<EduItem key={index} {...item} />
-			))}
-		</ScrollSection>
-	);
+  return (
+    <ScrollSection id="education">
+      {/* Section heading. */}
+      <div className="flex w-full gap-2 items-baseline">
+        <ScrollSectionHeading heading="education" />
+      </div>
+      {/* One card per education entry. */}
+      {education.map((item, index) => (
+        <EduItem key={index} {...item} />
+      ))}
+    </ScrollSection>
+  );
 }

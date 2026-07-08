@@ -4,12 +4,12 @@
  */
 
 export interface TestimonialItem {
-	id: string;
-	name: string;
-	email: string;
-	role: string;
-	company: string;
-	initials: string;
-	accentColor: string;
-	text: string;
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+  company: string;
+  initials: string;
+  accentColor: string;
+  text: string;
 }

@@ -9,10 +9,10 @@
 export const TAGLINE = "Crafting Production-Grade Next.js Applications";
 
 export const TAGLINE_CLASSNAME =
-	"w-fit mx-auto xl:text-8xl lg:text-7xl md:text-5xl sm:text-4xl text-4xl font-light tracking-tight items-center justify-center text-center max-w-5xl leading-[1.2] flex-wrap";
+  "w-fit mx-auto xl:text-8xl lg:text-7xl md:text-5xl sm:text-4xl text-4xl font-light tracking-tight items-center justify-center text-center max-w-5xl leading-[1.2] flex-wrap";
 
 export const TAGLINE_ACCENT_CLASS =
-	"bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-violet-200 to-rose-300";
+  "bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-violet-200 to-rose-300";
 
 // Public path to the downloadable resume.
 export const RESUME_PATH = "/akshit_bansal.pdf";
@@ -25,11 +25,11 @@ export const EMAIL_HREF = "mailto:artistbansal2004@gmail.com";
 
 // Default profile photo (front face of the flip card).
 export const PROFILE_IMAGE_URL =
-	"https://media-server.akshitbansal.me/api/images/credentials/pfp.webp";
+  "https://media-server.akshitbansal.me/api/images/credentials/pfp.webp";
 
 // Hover/back-face profile photo (revealed on flip).
 export const PROFILE_IMAGE_HOVER_URL =
-	"https://media-server.akshitbansal.me/api/images/credentials/pfp-hover.webp";
+  "https://media-server.akshitbansal.me/api/images/credentials/pfp-hover.webp";
 
 // Display name used in the hero headline.
 export const PROFILE_NAME = "Akshit Bansal";

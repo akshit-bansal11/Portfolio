@@ -4,14 +4,14 @@
  */
 
 export interface ProjectItem {
-	title: string;
-	description: string;
-	imgUrl?: string;
-	videoUrl?: string;
-	techStack: string[];
-	demoLink?: string;
-	githubLink?: string;
-	siteLink?: string;
-	designLink?: string;
-	isPublic?: boolean;
+  title: string;
+  description: string;
+  imgUrl?: string;
+  videoUrl?: string;
+  techStack: string[];
+  demoLink?: string;
+  githubLink?: string;
+  siteLink?: string;
+  designLink?: string;
+  isPublic?: boolean;
 }

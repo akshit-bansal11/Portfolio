@@ -17,46 +17,46 @@ import { SkillCategories } from "@/data/skillsData";
 
 // Home-page Skills section component.
 export default function Skills() {
-	return (
-		<ScrollSection id="skills">
-			{/* Heading row */}
-			<div className="flex w-full items-center justify-between gap-4 mb-8">
-				<ScrollSectionHeading heading="skills" />
-			</div>
+  return (
+    <ScrollSection id="skills">
+      {/* Heading row */}
+      <div className="flex w-full items-center justify-between gap-4 mb-8">
+        <ScrollSectionHeading heading="skills" />
+      </div>
 
-			{/* Category blocks */}
-			<div className="flex flex-col gap-4 md:gap-6 lg:gap-8 w-full">
-				{SkillCategories.map((category, catIndex) => (
-					<motion.div
-						key={category.title}
-						initial={{ opacity: 0, y: 16 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						transition={{ delay: catIndex * 0.08 }}
-						className="flex flex-col gap-3"
-					>
-						{/* Category label */}
-						<span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-500">
-							{category.title}
-						</span>
+      {/* Category blocks */}
+      <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 w-full">
+        {SkillCategories.map((category, catIndex) => (
+          <motion.div
+            key={category.title}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: catIndex * 0.08 }}
+            className="flex flex-col gap-3"
+          >
+            {/* Category label */}
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-500">
+              {category.title}
+            </span>
 
-						{/* Pill row */}
-						<div className="flex flex-wrap gap-1.5 lg:gap-2.5">
-							{category.skills.map((skill, skillIndex) => (
-								<motion.div
-									key={skill.name}
-									initial={{ opacity: 0, scale: 0.92 }}
-									whileInView={{ opacity: 1, scale: 1 }}
-									viewport={{ once: true }}
-									transition={{ delay: catIndex * 0.06 + skillIndex * 0.03 }}
-								>
-									<SkillPill skill={skill} />
-								</motion.div>
-							))}
-						</div>
-					</motion.div>
-				))}
-			</div>
-		</ScrollSection>
-	);
+            {/* Pill row */}
+            <div className="flex flex-wrap gap-1.5 lg:gap-2.5">
+              {category.skills.map((skill, skillIndex) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, scale: 0.92 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: catIndex * 0.06 + skillIndex * 0.03 }}
+                >
+                  <SkillPill skill={skill} />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </ScrollSection>
+  );
 }
